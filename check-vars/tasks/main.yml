@@ -1,0 +1,61 @@
+---
+
+- name: "case var is empty..."
+  debug: var=empty_var
+
+- name: check is empty ===> empty_var == ""
+  set_fact: check_var=true
+  when: empty_var == ""
+
+- name: check is defined ===> empty_var is undefined
+  set_fact: check_var=true
+  when: empty_var is undefined
+
+- name: check is none ===> empty_var is none
+  set_fact: check_var=true
+  when: empty_var is none
+
+################################################################################
+
+- name: case var is null...
+  debug: var=null_var
+
+- name: check is empty ===> empty_var == ""
+  set_fact: check_var=true
+  when: null_var == ""
+
+- name: check is defined ===> empty_var is undefined
+  set_fact: check_var=true
+  when: null_var is undefined
+
+- name: check is none ===> empty_var is none
+  set_fact: check_var=true
+  when: null_var is none
+
+- name: check is none ===> not null_var
+  set_fact: check_var=true
+  when: not null_var
+
+################################################################################
+
+- name: case var is undefined...
+  debug: var=undefined_var
+
+### FAILED!
+#- name: check is empty ===> empty_var == ""
+#  set_fact: check_var=true
+#  when: undefined_var == ""
+
+- name: check is defined ===> empty_var is undefined
+  set_fact: check_var=true
+  when: undefined_var is undefined
+
+- name: check is none ===> empty_var is none
+  set_fact: check_var=true
+  when: undefined_var is none
+
+### FAILED!
+#- name: check is none ===> not null_var
+#  set_fact: check_vars=true
+#  when: not undefined_var
+
