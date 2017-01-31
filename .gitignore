@@ -1,3 +1,9 @@
 ### https://raw.github.com/github/gitignore/3c0d3149123c828133d66c483fe4340379ef7533/Global/Ansible.gitignore
 
 *.retry
+<<<<<<< HEAD
+### https://raw.github.com/github/gitignore/3c0d3149123c828133d66c483fe4340379ef7533/Global/Vagrant.gitignore
+
+.vagrant/
+=======
+>>>>>>> c3818d01c3dbcbe2f38955abf0f06c5c399cdc72
