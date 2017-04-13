@@ -1,0 +1,19 @@
+---
+
+- debug: var=check_var
+  ignore_errors: yes
+
+- name: empty check
+  debug: msg="var is empty"
+  when: check_var == ""
+  ignore_errors: yes
+
+- name: none check
+  debug: msg="var is none"
+  when: check_var is none
+  ignore_errors: yes
+
+- name: undefine check
+  debug: msg="var is undefined"
+  when: check_var is not defined
+  ignore_errors: yes
